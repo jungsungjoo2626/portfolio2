@@ -1,0 +1,60 @@
+@charset "utf-8";
+
+/* 공통 */
+#wrap{min-width: 320px; position: relative; background-color: #5b5b5b;}
+.inner{max-width: 1600px;  margin: 0 auto;}
+
+header .inner{display: flex; justify-content: space-between; align-items: flex-end; max-width: 100%; }
+
+header .sub-gnb{display: flex; width: 735px; padding: 40px; position: absolute; top: 0; left: 50%; transform: translateX(-50%); z-index: 999;}
+header .sub-gnb > li{position: relative; margin: 0 auto;}
+header .sub-gnb > li > a{display: block; padding: 10px 20px 15px; font-size: 2rem; color: #fff;}
+header .sub-gnb > li:hover > a{color: #FFB627; transition: color 0.5s}
+
+.home{width: 40px; height: 40px; position: absolute; top: 30px; left: 50px;}
+.home img{width: 40px; height: 40px; object-fit: contain; opacity: 0.7;}
+.home img:hover{opacity: 1;}
+
+.bg .bg1{position: absolute; top: 120px; left: 30px; width: 1500px; position: fixed;}
+.bg .bg2{position: absolute; top: 220px; left: 30px; width: 1000px; position: fixed;}
+
+.inner{padding: 120px 0; }
+.inner img{width: 780px; object-fit: contain;}
+.inner h3{color: #FFB627; font-weight: 500; font-size: 50px;  text-align: center; z-index: 999; padding-bottom: 30px;}
+.inner .page1{display: flex; justify-content: space-between; flex-wrap: wrap; padding-bottom: 100px;}
+.inner .page1 img{padding-bottom: 50px;}
+
+.inner .page2{display: flex; justify-content: space-between; flex-wrap: wrap; padding-bottom: 100px;}
+.inner .page2 img{padding-bottom: 50px; }
+
+
+
+
+
+
+.pagebox{padding-top: 20px;}
+.page{text-align: center; display: flex; justify-content: center; gap: 2px;}
+.page li{border-radius: 50%; width: 30px; height: 30px; line-height: 30px;}
+.page li:hover{background-color: #FFB627; color: #fff;}
+.page li.on{background-color: #FFB627; color: #fff;}
+
+/*모바일*/
+@media screen and (max-width : 768px) {
+  header .sub-gnb{ width: 350px; flex-wrap: wrap; position: absolute; top: 80px; left: 50%;  font-size: 1.3rem;}
+
+
+  .bg .bg1{display: none;}
+  .bg .bg2{display: none;}
+
+  .home img{opacity: 1;}
+
+  .inner{width: 100%; padding: 100px 40px;} 
+  .inner img{width: 90%;}
+
+}
+/*portfolio 태블릿*/
+@media screen and (max-width : 1200px) {
+  
+  .inner{max-width: 1000px;  margin: 0 auto;}
+  .inner img{width: calc((1000px - 20px) / 2); object-fit: contain;}
+}
